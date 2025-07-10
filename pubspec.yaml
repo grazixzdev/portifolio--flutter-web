@@ -95,3 +95,14 @@ flutter:
 
   assets:
     - assets/image/
+
+  fonts:
+    - family: FontAwesomeBrands
+      fonts:
+        - asset: packages/font_awesome_flutter/fonts/fa-brands-400.ttf
+    - family: FontAwesomeSolid
+      fonts:
+        - asset: packages/font_awesome_flutter/fonts/fa-solid-900.ttf
+    - family: FontAwesomeRegular
+      fonts:
+        - asset: packages/font_awesome_flutter/fonts/fa-regular-400.ttf
