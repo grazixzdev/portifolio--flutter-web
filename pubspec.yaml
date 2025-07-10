@@ -35,6 +35,11 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
 
+
+dependency_overrides:
+  font_awesome_flutter:
+    path: L:\documentos\Programação\dart\fonts\font_awesome_flutter-master
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -95,14 +100,3 @@ flutter:
 
   assets:
     - assets/image/
-
-  fonts:
-    - family: FontAwesomeBrands
-      fonts:
-        - asset: packages/font_awesome_flutter/fonts/fa-brands-400.ttf
-    - family: FontAwesomeSolid
-      fonts:
-        - asset: packages/font_awesome_flutter/fonts/fa-solid-900.ttf
-    - family: FontAwesomeRegular
-      fonts:
-        - asset: packages/font_awesome_flutter/fonts/fa-regular-400.ttf

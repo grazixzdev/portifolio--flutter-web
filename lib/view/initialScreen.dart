@@ -260,7 +260,7 @@ class _initialScreenState extends State<initialScreen> {
                                   ),
                                   IconButton(
                                     onPressed: (){},
-                                    icon: Icon(SimpleIcons.javascript,
+                                    icon: Icon(FontAwesomeIcons.js,
                                       color: Colors.amberAccent,
                                       size: 25,
                                     ),
@@ -319,7 +319,7 @@ class _initialScreenState extends State<initialScreen> {
                                   ),
                                   IconButton(onPressed: () => _enterLink("https://github.com/Grazixz"),
                                     tooltip: "GitHub",
-                                    icon: Icon(SimpleIcons.github,
+                                    icon: Icon(FontAwesomeIcons.github,
                                       color: _color4,
                                       size: 30,
                                     ),
