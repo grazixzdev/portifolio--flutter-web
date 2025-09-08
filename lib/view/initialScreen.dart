@@ -327,7 +327,7 @@ class _InitialScreenState extends State<InitialScreen> {
                                         ),
                                         IconButton(
                                           onPressed: () => _enterLink(
-                                            "https://www.linkedin.com/in/graziela-lucena-dev/",
+                                            "https://www.linkedin.com/in/grazixzdev/",
                                           ),
                                           tooltip: "LinkedIn",
                                           icon: _IconsWidget(
@@ -336,7 +336,7 @@ class _InitialScreenState extends State<InitialScreen> {
                                         ),
                                         IconButton(
                                           onPressed: () => _enterLink(
-                                            "https://github.com/Grazixz",
+                                            "https://github.com/grazixzdev",
                                           ),
                                           tooltip: "GitHub",
                                           icon: _IconsWidget(
