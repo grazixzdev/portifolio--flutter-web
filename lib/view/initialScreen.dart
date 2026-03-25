@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math' as math;
 
+import 'package:dev_icons/dev_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -135,6 +136,18 @@ class _initialScreenState extends State<initialScreen> {
               "LiterAlura - JAVA",
               "Um desafio do programa Oracle Next Education (ONE) em parceria com a Alura. O objetivo foi desenvolver uma aplicação com um catálogo de livros interativo, consumindo dados de uma API e armazenando essas informações em um banco de dados relacional.",
               "https://github.com/Grazixz/literalura--challenge3--one"
+            ),
+
+            _buildCertCard(
+                "ForumHub - JAVA(SPRING BOOT)",
+                "Um desafio do programa Oracle Next Education (ONE) em parceria com a Alura. O objetivo foi desenvolver uma API Rest de um Forum e armazenar em um banco de dados com entidades Usuário, Curso, Tópico e Resposta.",
+                "https://github.com/grazixzdev/forum-hub--challenge4--one"
+            ),
+
+            _buildCertCard(
+                "NerdSpace - JAVA(SPRING BOOT), HTML/CSS, JAVASCRIPT",
+                "O NerdSpace é uma API de catálogo e gerenciamento de mídias da cultura geek, abrangendo Animes, Filmes, Livros, Jogos e Mangás. O projeto foi desenvolvido com Java 21 e Spring Boot 3, com foco em uma arquitetura limpa, integridade de dados e filtragem dinâmica.",
+                "https://github.com/grazixzdev/nerdspace"
             )
           ],
         ),
@@ -289,6 +302,30 @@ class _initialScreenState extends State<initialScreen> {
                                     ),
                                     mouseCursor: MouseCursor.defer,
                                   ),
+                                  IconButton(
+                                    onPressed: (){},
+                                    icon: Icon(DevIcons.springPlain,
+                                      color: Colors.green,
+                                      size: 25,
+                                    ),
+                                    mouseCursor: MouseCursor.defer,
+                                  ),
+                                  IconButton(
+                                    onPressed: (){},
+                                    icon: Icon(DevIcons.mysqlPlain,
+                                      color: Colors.lightBlue,
+                                      size: 25,
+                                    ),
+                                    mouseCursor: MouseCursor.defer,
+                                  ),
+                                  IconButton(
+                                    onPressed: (){},
+                                    icon: Icon(DevIcons.postgresqlPlain,
+                                      color: Colors.blueAccent,
+                                      size: 25,
+                                    ),
+                                    mouseCursor: MouseCursor.defer,
+                                  ),
                                 ],
                               ),
                               Text(
@@ -309,14 +346,14 @@ class _initialScreenState extends State<initialScreen> {
                                       size: 30,
                                     ),
                                   ),
-                                  IconButton(onPressed: () => _enterLink("https://www.linkedin.com/in/graziela-lucena-dev/"),
+                                  IconButton(onPressed: () => _enterLink("https://www.linkedin.com/in/grazixzdev/"),
                                     tooltip: "LinkedIn",
                                     icon: FaIcon(FontAwesomeIcons.linkedin,
                                       color: _color4,
                                       size: 30,
                                     ),
                                   ),
-                                  IconButton(onPressed: () => _enterLink("https://github.com/Grazixz"),
+                                  IconButton(onPressed: () => _enterLink("https://github.com/grazixzdev"),
                                     tooltip: "GitHub",
                                     icon: FaIcon(FontAwesomeIcons.github,
                                       color: _color4,
