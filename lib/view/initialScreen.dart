@@ -47,7 +47,7 @@ class _initialScreenState extends State<initialScreen> {
       margin: EdgeInsets.symmetric(vertical: 8),
       color: _color2,
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12),
       ),
       child: ListTile(
         title: Text(
@@ -78,10 +78,20 @@ class _initialScreenState extends State<initialScreen> {
 
   @override
   Widget build(BuildContext context) {
+    bool isMobile(BuildContext context) =>
+        MediaQuery.of(context).size.width < 600;
+
+    bool isTablet(BuildContext context) =>
+        MediaQuery.of(context).size.width >= 600 &&
+            MediaQuery.of(context).size.width < 1024;
+
+    bool isDesktop(BuildContext context) =>
+        MediaQuery.of(context).size.width >= 1024;
+
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(
-          color: _color4
+            color: _color4
         ),
         backgroundColor: _color1,
         leading: Builder(
@@ -90,7 +100,7 @@ class _initialScreenState extends State<initialScreen> {
                 tooltip: "Projetos",
                 onPressed: Scaffold.of(context).openDrawer,
                 icon: Icon(Icons.code,
-                    size: 45,
+                  size: isMobile(context) ? 30 : 45,
                 ))),
         actions: [
           Builder(
@@ -99,7 +109,7 @@ class _initialScreenState extends State<initialScreen> {
                   tooltip: "Certificados",
                   onPressed: Scaffold.of(context).openEndDrawer,
                   icon: Icon(Icons.school,
-                      size: 45,
+                    size: isMobile(context) ? 30 : 45,
                   )
               )
           ),
@@ -107,15 +117,15 @@ class _initialScreenState extends State<initialScreen> {
       ),
       drawer: Container(
         color: _color1,
-        width: 500,
+        width: MediaQuery.of(context).size.width * 0.8,
         padding: EdgeInsets.all(24),
         child: ListView(
           children: [
             Text("Meus projetos",
               style: TextStyle(
-                color: _color4,
-                fontSize: 25,
-                fontWeight: FontWeight.bold
+                  color: _color4,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold
               ),
             ),
             Divider(thickness: 2, color: _color4,),
@@ -125,7 +135,7 @@ class _initialScreenState extends State<initialScreen> {
                 "Um desafio do programa Oracle Next Education (ONE) em parceria com a Alura. O objetivo foi desenvolver uma aplicação conversor de moedas utilizando Java 21, consumindo dados de uma API.",
                 "https://github.com/Grazixz/conversor--de--moedas--challenge2--one"
             ),
-            
+
             _buildCertCard(
                 "Weather Forecast - JAVA",
                 "Uma aplicação que consome uma API de prevosão do tempo e exibe informações climáticas com base no local informado pelo usuário.",
@@ -133,9 +143,9 @@ class _initialScreenState extends State<initialScreen> {
             ),
 
             _buildCertCard(
-              "LiterAlura - JAVA",
-              "Um desafio do programa Oracle Next Education (ONE) em parceria com a Alura. O objetivo foi desenvolver uma aplicação com um catálogo de livros interativo, consumindo dados de uma API e armazenando essas informações em um banco de dados relacional.",
-              "https://github.com/Grazixz/literalura--challenge3--one"
+                "LiterAlura - JAVA",
+                "Um desafio do programa Oracle Next Education (ONE) em parceria com a Alura. O objetivo foi desenvolver uma aplicação com um catálogo de livros interativo, consumindo dados de uma API e armazenando essas informações em um banco de dados relacional.",
+                "https://github.com/Grazixz/literalura--challenge3--one"
             ),
 
             _buildCertCard(
@@ -154,7 +164,7 @@ class _initialScreenState extends State<initialScreen> {
       ),
       endDrawer: Container(
         color: _color1,
-        width: 500,
+        width: MediaQuery.of(context).size.width * 0.8,
         padding: EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -208,8 +218,14 @@ class _initialScreenState extends State<initialScreen> {
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 200, vertical: 10),
+                padding: EdgeInsets.symmetric(
+                  horizontal: isDesktop(context)
+                      ? 200
+                      : isTablet(context)
+                      ? 80
+                      : 16,
+                  vertical: 10,
+                ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   spacing: 50,
@@ -218,7 +234,9 @@ class _initialScreenState extends State<initialScreen> {
                       duration: Duration(milliseconds: 100),
                       padding: EdgeInsets.symmetric(
                           vertical: 20, horizontal: 20),
-                      width: 450,
+                      width: isDesktop(context)
+                          ? 450
+                          : double.infinity,
                       decoration: BoxDecoration(
                           gradient: LinearGradient(
                               colors: [_color1, _color2, _color1],
@@ -239,7 +257,11 @@ class _initialScreenState extends State<initialScreen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               CircleAvatar(
-                                radius: 110,
+                                radius: isMobile(context)
+                                    ? 70
+                                    : isTablet(context)
+                                    ? 90
+                                    : 110,
                                 backgroundImage: AssetImage(
                                     "assets/image/graziela.jpg"
                                 ),
@@ -247,20 +269,21 @@ class _initialScreenState extends State<initialScreen> {
                               Text("Graziela Lucena",
                                 style: TextStyle(
                                     color: _color4,
-                                    fontSize: 25,
+                                    fontSize: isMobile(context) ? 20 : 25,
                                     fontWeight: FontWeight.bold
                                 ),),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                spacing: 5,
+                              Wrap(
+                                alignment: WrapAlignment.center,
+                                spacing: 8,
+                                runSpacing: 8,
                                 children: [
                                   IconButton(
-                                      onPressed: (){},
-                                      icon: FaIcon(FontAwesomeIcons.html5,
-                                          color: Colors.deepOrange,
-                                          size: 25,
-                                      ),
-                                      mouseCursor: MouseCursor.defer,
+                                    onPressed: (){},
+                                    icon: FaIcon(FontAwesomeIcons.html5,
+                                      color: Colors.deepOrange,
+                                      size: 25,
+                                    ),
+                                    mouseCursor: MouseCursor.defer,
                                   ),
                                   IconButton(
                                     onPressed: (){},
@@ -332,7 +355,7 @@ class _initialScreenState extends State<initialScreen> {
                                 "Sou estudante de Ciência da Computação, sendo apaixonada por tecnologia, tenho base em desenvolvimento web e mobile. Atualmente estou estudando Java, com objetivo de me tornar fullstack. Estou sempre em busca de novos desafios e oportunidades para aprender e crescer na área da tecnologia.",
                                 style: TextStyle(
                                   color: _color4,
-                                  fontSize: 16,
+                                  fontSize: isMobile(context) ? 14 : 16,
                                 ),
                                 textAlign: TextAlign.center,
                               ),
