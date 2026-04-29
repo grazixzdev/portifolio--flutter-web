@@ -2,6 +2,8 @@
 
 Esse repositório é o resultado de uma ideia simples: construir meu portfólio usando Dart. Não só por gostar da linguagem, mas também por ser uma forma de praticar o que aprendi com base em outras tecnologias — HTML, CSS, JavaScript, Java... — e aplicar num projeto que é só meu.
 
+[Link do Portifólio](https://portifolio-flutter-i8qmfbl68-grazielas-projects-635ca373.vercel.app/)                                   
+
 ---
 
 ## 💻Tecnologias
@@ -33,3 +35,5 @@ Já trabalhei com HTML, CSS e JS. Mas eu queria explorar algo fora do comum pra 
 ## ⚙️Em construção
 
 O projeto ainda tá evoluindo. Estou pensando em adicionar algo mais em breve...
+
+
