@@ -2,7 +2,7 @@
 
 Esse repositório é o resultado de uma ideia simples: construir meu portfólio usando Dart. Não só por gostar da linguagem, mas também por ser uma forma de praticar o que aprendi com base em outras tecnologias — HTML, CSS, JavaScript, Java... — e aplicar num projeto que é só meu.
 
-[Link do Portifólio](https://portifolio-flutter-i8qmfbl68-grazielas-projects-635ca373.vercel.app/)                                   
+[Link do Portifólio](https://portifolio-flutter-jla4qyx59-grazielas-projects-635ca373.vercel.app/)                                   
 
 ---
 
