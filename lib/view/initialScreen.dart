@@ -158,6 +158,12 @@ class _initialScreenState extends State<initialScreen> {
                 "NerdSpace - JAVA(SPRING BOOT), HTML/CSS, JAVASCRIPT",
                 "O NerdSpace é uma API de catálogo e gerenciamento de mídias da cultura geek, abrangendo Animes, Filmes, Livros, Jogos e Mangás. O projeto foi desenvolvido com Java 21 e Spring Boot 3, com foco em uma arquitetura limpa, integridade de dados e filtragem dinâmica.",
                 "https://github.com/grazixzdev/nerdspace"
+            ),
+
+            _buildCertCard(
+              "PyLoot - PYTHON",
+              "O PyLoot é uma ferramenta de automação desenvolvida em Python para minerar dados de ofertas de jogos no site Nuuvem. O script navega pelo catálogo, extrai informações de preços e organiza tudo em um arquivo estruturado para análise.",
+              "https://github.com/grazixzdev/nerdspace"
             )
           ],
         ),
